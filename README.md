@@ -1,13 +1,13 @@
 <H3> Name : NITHYA D </H3>
 <H3>Register No : 212223240110</H3>
-<H3> Experiment 1</H3>
+<H3> Experiment : 1</H3>
 <H3>DATE: 21/07/2026</H3>
 <H1 ALIGN=CENTER> Implementation of Bayesian Networks</H1>
 
 ### Aim :
-    To create a bayesian Network for the given dataset in Python
+To create a bayesian Network for the given dataset in Python
     
-### Algorithm:
+### Algorithm :
 Step 1: Import necessary libraries: pandas, networkx, matplotlib.pyplot, Bbn, Edge, EdgeType, BbnNode, Variable, EvidenceBuilder, InferenceController<br/>
 Step 2: Set pandas options to display more columns<br/>
 Step 3: Read in weather data from a CSV file using pandas<br/>
@@ -23,10 +23,11 @@ Step 12: Set options for the graph appearance<br/>
 Step 13: Generate the graph using networkx<br/>
 Step 14: Update margins and display the graph using matplotlib.pyplot<br/>
 
-### Program:
+### Program :
 ```
 !pip install pybbn
-
+from google.colab import drive
+drive.mount('/content/drive')
 import networkx as nx
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -39,7 +40,7 @@ from pybbn.pptc.inferencecontroller import InferenceController
 
 pd.options.display.max_columns=50
 
-df = pd.read_csv('/content/weatherAUS (1).csv', encoding='utf-8')
+df = pd.read_csv("/content/drive/MyDrive/Applied AI/weatherAUS.csv")
 df = df[pd.isnull(df['RainTomorrow']) == False]
 
 
@@ -104,11 +105,10 @@ plt.axis("off")
 plt.show()
 ```
 
-### Output:
-<img width="680" height="612" alt="image" src="https://github.com/user-attachments/assets/a685d9fe-97e3-4a9f-98ec-9ae8258591df" />
-<img width="647" height="473" alt="image" src="https://github.com/user-attachments/assets/3d129528-b100-4bfe-8a1a-8d0530f70b03" />
+### Output :
+[<img width="680" height="612" alt="image" src="https://github.com/user-attachments/assets/a685d9fe-97e3-4a9f-98ec-9ae8258591df" />
+<img width="590" height="447" alt="image" src="https://github.com/user-attachments/assets/69c6e1c3-4bb2-4e1b-ba66-5f03f98ee980" />
 
 
-
-### Result:
+### Result :
    Thus a Bayesian Network is generated using Python.
